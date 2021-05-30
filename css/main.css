@@ -62,6 +62,10 @@ section#hero {
     align-items: center;
 }
 
+section:not(#hero) {
+    padding-bottom: 50px;
+}
+
 section > .section-bkg {
     position: absolute;
     top: 0;
@@ -91,11 +95,16 @@ section#hero > header {
 }
 
 section:not(#hero) > header {
-    margin: 1em 0;
+    margin: 1em 0 0.5em 0;
 }
 
-section {
-    font-size: 20px;
+section > .content {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    padding: 1em;
 }
 
 @media (min-width: 1024px) {
