@@ -3,8 +3,10 @@
     src: url(DeadStock.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
 :root {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
 }
 
 ::selection {
@@ -52,6 +54,7 @@ section {
 }
 
 section#hero {
+    height: 100%;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     display: flex;
@@ -59,7 +62,7 @@ section#hero {
     align-items: center;
 }
 
-section#hero > .section-bkg {
+section > .section-bkg {
     position: absolute;
     top: 0;
     left: 0;
@@ -79,13 +82,20 @@ section#hero > .section-bkg {
 
 section > header {
     font-family: 'Cobra';
-    margin: 1em 0;
     font-size: min(15vw, 20vh);
 }
 
 section#hero > header {
-    margin: 0;
+    user-select: none;
     font-size: min(30vw, 25vh);
+}
+
+section:not(#hero) > header {
+    margin: 1em 0;
+}
+
+section {
+    font-size: 20px;
 }
 
 @media (min-width: 1024px) {
