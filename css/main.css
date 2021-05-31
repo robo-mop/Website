@@ -42,6 +42,12 @@ body {
     min-height: -webkit-fill-available;
 }
 
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
 /* Section */
 
 section {
@@ -144,7 +150,7 @@ section > .content {
 }
 
 .showcase > .card:not(:last-of-type) {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .card > .card-img {
@@ -167,7 +173,6 @@ section > .content {
 .carousel > .indicators {
     margin: 10px 0;
     display: flex;
-    /* background-color: beige; */
     height: 10px;
     width: 100%;
     flex-direction: row;
