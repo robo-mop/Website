@@ -1,21 +1,22 @@
-function print(output, style="")
-{
-    if(style=="")
-    {
-        console.log(output);
-    }
-    else
-    {
-        console.log(output, style);
-    }
-}
-
-function map(val, lb, ub, lv, uv)
-{
-    return lv + (val-lb)*(uv-lv)/(ub-lb);
-}
-
 function setup()
 {
-    print("IN SETUP");
+    document.querySelectorAll(".showcase").forEach((showcase)=>{
+        showcase.addEventListener("scroll", ()=>{
+            let firstChild = showcase.children[0];
+            let margin = parseFloat(getComputedStyle(firstChild).getPropertyValue("margin-right").replace("px", ""));
+            let perc = showcase.scrollLeft / ((showcase.childElementCount-1)*(firstChild.clientWidth+margin)); // 0 - 1
+            let each = 1 / (showcase.childElementCount-1); // 33% for 4 elements
+            let index1 = parseInt(perc / each);
+            let op1 = perc % each;
+            let a = document.querySelectorAll(".indicators > .signal");
+            a[index1].style.opacity = map(op1, 0, each, 1, 0.2);
+            a[index1+1].style.opacity = map(op1, 0, each, 0.2, 1);
+            for(let i = 0; i < showcase.childElementCount; ++i)
+            {
+                if(i != index1 && i != index1+1) {
+                    a[i].style.opacity = 0.2;
+                }
+            }
+        });
+    });
 }

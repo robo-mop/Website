@@ -104,5 +104,89 @@ section > .content {
     padding: 1em;
 }
 
+/* Carousel */
+
+.carousel {
+    /* background-color: aqua; */
+    height: auto;
+    overflow-x: hidden;
+}
+
+.carousel > .showcase {
+    position: relative;
+    /* background-color: red; */
+    white-space: nowrap;
+    height: fit-content;
+    --space: 12.5%;
+    padding: 10px var(--space);
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--space);
+}
+
+.showcase::-webkit-scrollbar {
+    display: none;
+}
+
+.showcase > .card {
+    --off: 30px;
+    clip-path: polygon(0 0, calc(100% - var(--off)) 0, 100% var(--off), 100% 100%, var(--off) 100%, 0 calc(100% - var(--off)));
+    height: 100%;
+    scroll-snap-align: start;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px;
+    padding-bottom: 0;
+    /* color: black; */
+    background-color: yellow;
+    width: 100%;
+}
+
+.showcase > .card:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.card > .card-img {
+    clip-path: polygon(0 0, calc(100% - var(--off)) 0, 100% var(--off), 100% 100%, 0 100%);
+    aspect-ratio: 1 / 1;
+    background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card > .content {
+    padding: 1em 0;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    white-space: normal;
+}
+
+.carousel > .indicators {
+    margin: 10px 0;
+    display: flex;
+    /* background-color: beige; */
+    height: 10px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 25%;
+    align-items: center;
+}
+
+.indicators > .signal {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    opacity: 0.33;
+}
+
+.indicators > .signal:first-of-type {
+    opacity: 1;
+}
+
 @media (min-width: 1024px) {
 }

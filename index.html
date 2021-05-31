@@ -27,8 +27,36 @@
         <div class="content"></div>
         <div class="content">I also like long walks on the beach and puppies.</div>
     </section>
+
+    <section id="projects">
+        <header>Projects</header>
+        <div class="carousel">
+            <div class="showcase">
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/color-interpolation.png);">
+                    </div>
+                    <div class="content">Color<br>Interpolation</div>
+                </div><!--
+                --><div class="card">
+                    <div class="card-img" style="background-image: url(images/cistern.jpg); background-size: cover;">
+                    </div>
+                    <div class="content">Internation Sulonian<br>Model United Nations</div>
+                </div>
+            </div>
+            <div class="indicators">
+                <div class="signal"></div>
+                <div class="signal"></div>
+            </div>
+        </div>
+    </section>
     
     <!-- Scripts -->
+    <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(window).on("load", ()=>{
+            setup();
+        });
+    </script>
 </body>
 </html>
