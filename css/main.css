@@ -89,6 +89,7 @@ section > .section-bkg {
 }
 
 section > header {
+    text-transform: capitalize;
     font-family: 'Cobra';
     font-size: min(15vw, 20vh);
 }
@@ -191,6 +192,27 @@ section > .content {
 
 .indicators > .signal:first-of-type {
     opacity: 1;
+}
+
+/* Icon Drawer */
+
+.icon-drawer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 10%;
+    gap: 25px 0;
+}
+
+.icon-drawer > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-drawer img {
+    filter: saturate(2) brightness(1);
+    width: 100px;
+    aspect-ratio: 1 / 1;
 }
 
 @media (min-width: 1024px) {
