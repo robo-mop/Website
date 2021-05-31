@@ -211,7 +211,7 @@ section > .content {
 
 .icon-drawer img {
     filter: saturate(2) brightness(1);
-    width: 100px;
+    width: 80%;
     aspect-ratio: 1 / 1;
 }
 
