@@ -91,7 +91,7 @@ section > .section-bkg {
 section > header {
     text-transform: capitalize;
     font-family: 'Cobra';
-    font-size: min(15vw, 20vh);
+    font-size: min(16vw, 20vh);
 }
 
 section#hero > header {
@@ -210,7 +210,7 @@ section > .content {
 }
 
 .icon-drawer img {
-    filter: saturate(2) brightness(1);
+    filter: saturate(1.5) brightness(1);
     width: 80%;
     aspect-ratio: 1 / 1;
 }
